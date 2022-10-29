@@ -1,0 +1,106 @@
+﻿@{ ViewData["Title"] = "Cadatro"; }
+
+<div class="text-center">
+  <h4 class="display-4 fw-bold text-info">Cadastro</h4>
+  <!-- Form with CPF, Nome, Data Nascimento, Sexo, Endereço, Estado, Cidade -->
+  <form class="border border-info border-3 rounded rounded-3 p-4">
+    <div class="row">
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputCPF" class="me-2 form-label">
+          <strong>CPF:</strong>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="InputCPF"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputName" class="me-2 form-label">
+          <strong>Nome:</strong>
+        </label>
+        <input type="text" class="form-control" id="InputName" />
+      </div>
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputDate" class="me-2 form-label">
+          <strong class="text-nowrap">Data Nascimento:</strong>
+        </label>
+        <input type="date" class="form-control" id="InputDate" />
+      </div>
+      <div
+        class="mb-3 form-check col d-flex justify-content-center align-items-center"
+      >
+        <strong class="me-5">Sexo:</strong>
+        <input
+          type="radio"
+          name="inputSex"
+          class="form-check-input me-2"
+          id="sexM"
+        />
+        <label class="form-check-label" for="sexM">Masculino</label>
+
+        <input
+          type="radio"
+          checked
+          name="inputSex"
+          class="form-check-input ms-4 me-2"
+          id="sexF"
+        />
+        <label class="form-check-label" for="sexF">Feminino</label>
+      </div>
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputAddress" class="me-2 form-label">
+          <strong>Endereço:</strong>
+        </label>
+        <input
+          style="width: 400px"
+          type="text"
+          class="form-control"
+          id="InputAddress"
+        />
+      </div>
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputState" class="me-2 form-label">
+          <strong>Estado:</strong>
+        </label>
+        <select
+          style="max-width: 140px"
+          class="form-select"
+          id="InputState"
+          aria-label="Default select example"
+        >
+          <option value="" disabled="disabled" selected>Selecione</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+          <option value="SP">SP</option>
+        </select>
+      </div>
+      <div class="mb-3 col d-flex justify-content-center align-items-center">
+        <label for="InputCity" class="me-2 form-label">
+          <strong>Cidade:</strong>
+        </label>
+        <select
+          style="max-width: 180px"
+          class="form-select rounded rounded-10"
+          id="InputCity"
+          aria-label="Default select example"
+        >
+          <option value="" disabled="disabled" selected>Selecione</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Belo Horizonte">Belo Horizonte</option>
+          <option value="São Paulo">São Paulo</option>
+        </select>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button id="btnSubmit" style="width: 160px" type="button" class="btn btn-info me-3">
+        Salvar
+      </button>
+      <button id="btnClear" style="width: 160px" type="button" class="border btn btn-warning">
+        Limpar
+    </div>
+    </button>
+  </form>
+</div>
+<script src="~/js/home.js" asp-append-version="true"></script>
